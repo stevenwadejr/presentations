@@ -217,13 +217,6 @@ return $relatedDataPipeline->processPipeline();
 #### After - Builder
 
 ```php
-$stages = [
-    SomeFakeCrmApp::KEY_LATEST_ACTIVITY  => LatestActivityPipeline::class,
-    SomeFakeCrmApp::KEY_LIST_MEMBERSHIPS => ListsStage::class,
-    SomeFakeCrmApp::KEY_WORKFLOWS        => WorkflowsStage::class,
-    SomeFakeCrmApp::KEY_DEALS            => DealsStage::class,
-];
-
 function buildPipeline() {
     $builder = new PipelineBuilder;
 
